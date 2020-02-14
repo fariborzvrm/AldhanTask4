@@ -7,7 +7,7 @@ import com.example.aldhantask4.pojo.Timings
 import com.example.aldhantask4.toPersianNumber
 import kotlinx.android.synthetic.main.activity_aladhan.*
 
-class AladhanActivity : AppCompatActivity() {
+class AladhanActivity : AppCompatActivity() , AladhanContract.ViewContract {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +21,10 @@ class AladhanActivity : AppCompatActivity() {
         }
     }
 
-    fun getCity()= edtCity.text.toString()
-    fun getCountry()= edtCountry.text.toString()
+    override fun getCity()= edtCity.text.toString()
+    override fun getCountry()= edtCountry.text.toString()
 
-    fun setTimings(prayerTimings: Timings?){
+    override fun setTimings(prayerTimings: Timings?){
 
         txtSunrise.text = prayerTimings?.Sunrise!!.toPersianNumber()
         txtDhuhr.text = prayerTimings.Dhuhr.toPersianNumber()

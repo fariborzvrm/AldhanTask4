@@ -2,17 +2,17 @@ package com.example.aldhantask4.aladhan
 
 import com.example.aldhantask4.pojo.Timings
 
-class AladhanPresenter(val view : AladhanActivity) {
+class AladhanPresenter(val view : AladhanActivity):AladhanContract.PresenterContract {
     val model = AladhanModel(this)
 
 
-    fun onSearchClicked(){
+    override fun onSearchClicked(){
         val city = view.getCity()
         val country = view.getCountry()
         model.getTimingsData(city,country,8)
     }
 
-    fun retrofitResponse( prayerTimings: Timings?){
+    override fun retrofitResponse(prayerTimings: Timings?){
         view.setTimings(prayerTimings)
     }
 }
