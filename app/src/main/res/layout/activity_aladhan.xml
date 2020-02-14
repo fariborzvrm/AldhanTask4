@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
-    android:id="@+id/lnDay"
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/dayyyyy"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".aladhan.AldhanFragment"
-    android:background="@drawable/dayyyyy"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-
+    tools:context=".aladhan.AladhanActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="150dp"
@@ -243,7 +240,6 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
 
 
 </LinearLayout>
