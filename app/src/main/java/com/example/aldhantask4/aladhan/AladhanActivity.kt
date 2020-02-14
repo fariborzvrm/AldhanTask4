@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.aldhantask4.R
 import com.example.aldhantask4.pojo.Timings
+import com.example.aldhantask4.toPersianNumber
 import kotlinx.android.synthetic.main.activity_aladhan.*
 
 class AladhanActivity : AppCompatActivity() {
@@ -25,12 +26,12 @@ class AladhanActivity : AppCompatActivity() {
 
     fun setTimings(prayerTimings: Timings?){
 
-        txtSunrise.text = prayerTimings?.Sunrise
-        txtDhuhr.text = prayerTimings?.Dhuhr
-        txtAsr.text = prayerTimings?.Asr
-        txtSunset.text= prayerTimings?.Sunset
-        txtMaghrib.text = prayerTimings?.Maghrib
-        txtIsha.text = prayerTimings?.Isha
-        txtMidnight.text = prayerTimings?.Midnight
+        txtSunrise.text = prayerTimings?.Sunrise!!.toPersianNumber()
+        txtDhuhr.text = prayerTimings.Dhuhr.toPersianNumber()
+        txtAsr.text = prayerTimings.Asr.toPersianNumber()
+        txtSunset.text= prayerTimings.Sunset.toPersianNumber()
+        txtMaghrib.text = prayerTimings.Maghrib.toPersianNumber()
+        txtIsha.text = prayerTimings.Isha.toPersianNumber()
+        txtMidnight.text = prayerTimings.Midnight.toPersianNumber()
     }
 }

@@ -18,6 +18,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="right"
+        android:background="#FFFFFF"
         >
 
         <View
